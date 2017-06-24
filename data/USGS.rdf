@@ -1,0 +1,1690 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:SWO="http://cegis.usgs.gov/SWO/"
+     xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#alt -->
+
+    <AnnotationProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#alt">
+        <rdfs:comment>The WGS84 altitude of a SpatialThing (decimal meters 
+above the local reference ellipsoid).</rdfs:comment>
+        <rdfs:label>altitude</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#lat -->
+
+    <AnnotationProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat">
+        <rdfs:comment>The WGS84 latitude of a SpatialThing (decimal degrees).</rdfs:comment>
+        <rdfs:label>latitude</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#long -->
+
+    <AnnotationProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#long">
+        <rdfs:comment>The WGS84 longitude of a SpatialThing (decimal degrees).</rdfs:comment>
+        <rdfs:label>longitude</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/constuctionMaterial -->
+
+    <ObjectProperty rdf:about="http://cegis.usgs.gov/SWO/constuctionMaterial">
+        <rdfs:domain rdf:resource="http://cegis.usgs.gov/SWO/Dam"/>
+        <rdfs:domain rdf:resource="http://cegis.usgs.gov/SWO/Reservoir"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/event -->
+
+    <ObjectProperty rdf:about="http://cegis.usgs.gov/SWO/event">
+        <rdfs:domain rdf:resource="http://cegis.usgs.gov/SWO/Waterbody"/>
+        <rdfs:range rdf:resource="http://cegis.usgs.gov/SWO/Event"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a process involving surface water</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/flow -->
+
+    <ObjectProperty rdf:about="http://cegis.usgs.gov/SWO/flow">
+        <rdfs:domain rdf:resource="http://cegis.usgs.gov/SWO/Feature"/>
+        <rdfs:range rdf:resource="http://cegis.usgs.gov/SWO/Waterbody"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">surface water supported by a physical feature</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/inundationControlStatus -->
+
+    <ObjectProperty rdf:about="http://cegis.usgs.gov/SWO/inundationControlStatus">
+        <rdfs:subPropertyOf rdf:resource="http://cegis.usgs.gov/SWO/status"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/operationalStatus -->
+
+    <ObjectProperty rdf:about="http://cegis.usgs.gov/SWO/operationalStatus">
+        <rdfs:subPropertyOf rdf:resource="http://cegis.usgs.gov/SWO/status"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/product -->
+
+    <ObjectProperty rdf:about="http://cegis.usgs.gov/SWO/product">
+        <rdfs:domain rdf:resource="http://cegis.usgs.gov/SWO/Pipeline"/>
+        <rdfs:comment>The material a pipeline is channelling</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/relationshipToSurface -->
+
+    <ObjectProperty rdf:about="http://cegis.usgs.gov/SWO/relationshipToSurface">
+        <rdfs:domain rdf:resource="http://cegis.usgs.gov/SWO/Pipeline"/>
+        <rdfs:range rdf:resource="http://cegis.usgs.gov/SWO/RelationshipToSurface"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/spatialExtent -->
+
+    <ObjectProperty rdf:about="http://cegis.usgs.gov/SWO/spatialExtent"/>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/stage -->
+
+    <ObjectProperty rdf:about="http://cegis.usgs.gov/SWO/stage">
+        <rdfs:domain rdf:resource="http://cegis.usgs.gov/SWO/Waterbody"/>
+        <rdfs:range rdf:resource="http://cegis.usgs.gov/SWO/Stage"/>
+        <rdfs:label>stage</rdfs:label>
+    </ObjectProperty>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/status -->
+
+    <ObjectProperty rdf:about="http://cegis.usgs.gov/SWO/status"/>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/temporality -->
+
+    <ObjectProperty rdf:about="http://cegis.usgs.gov/SWO/temporality">
+        <rdfs:domain rdf:resource="http://cegis.usgs.gov/SWO/Waterbody"/>
+        <rdfs:range rdf:resource="http://cegis.usgs.gov/SWO/Temporality"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Abandoned -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Abandoned">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Status"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Operational"/>
+        <rdfs:comment>Intact but not maintained or intended for use</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/AboveWater -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/AboveWater">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/RelationshipToSurface"/>
+        <rdfs:comment>Exposed at mean lower low water</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Acre -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Acre">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/SpatialMeasurementUnit"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Active -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Active">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Status"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/AggregateFeature -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/AggregateFeature">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Feature"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/FeatureObject"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Approximate -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Approximate">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Stage"/>
+        <rdfs:comment>Conditions permit the feature to e confidently positioned between 0.02&quot; and 0.1&quot;, at map scale, of its true ground position</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Aquaculture -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Aquaculture">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Reservoir"/>
+        <rdfs:comment>For rearing of finfish, shellfish, or aquatic plants</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Aqueduct -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Aqueduct">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/FeatureObject"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Area -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Area">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/SpatialQuality"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/AreaOfComplexChannels -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/AreaOfComplexChannels">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/AggregateFeature"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/UndergroundConduit"/>
+        <rdfs:comment>An area where a stream or river flows in an intricate network of sediment-driven interlacing channels. Not named features. Areas of Complex Channels are common in Alaska where glacial till is available and there is a steep slope. They are also common in low-lying sedimentary coastal regions of the southeastern and Gulf Coast states. </rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/AreaToBeSubmerged -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/AreaToBeSubmerged">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/FeatureObject"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/AtOrNear -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/AtOrNear">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/RelationshipToSurface"/>
+        <rdfs:comment>At or slightly above the surface</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/AverageWaterElevation -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/AverageWaterElevation">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Stage"/>
+        <rdfs:comment>The stage of a natural water body that prevails for the greater part of the year</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/BayOrInlet -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/BayOrInlet">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Waterbody"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Coastline"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Estuary"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/IceMass"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Impoundment"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/LakeOrPond"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Rapids"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/SeaOrOcean"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/SinkOrRise"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/SpringOrSeep"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/StreamOrRiver"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/SubmergedStream"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Watercourse"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Waterfall"/>
+        <rdfs:comment>A water area that is an opening of the sea/ocean into the land, or of an estuary, lake, or river into its shore. BayInlets are used in the NHD to provide named areas for other hydrographic features, and must overlap Estuary, LakePond, SeaOcean, or StreamRiver. May be a named feature. </rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Bridge -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Bridge">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/FeatureObject"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/CanalOrDitch -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/CanalOrDitch">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/FeatureObject"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Channel -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Channel">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/FeatureObject"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Coastline -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Coastline">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Waterbody"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Estuary"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/IceMass"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Impoundment"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/LakeOrPond"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Rapids"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/SeaOrOcean"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/SinkOrRise"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/SpringOrSeep"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/StreamOrRiver"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/SubmergedStream"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Watercourse"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Waterfall"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Connector -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Connector">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/FeatureObject"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Contributing -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Contributing">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Divergence"/>
+        <rdfs:comment>A point on the surface water network where water is added to the network, typically through a conveyance such as a CanalDitch or pipeline</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/CoolingPond -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/CoolingPond">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Treatment"/>
+        <rdfs:comment>undefined in NHD</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Dam -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Dam">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Event"/>
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/FeatureObject"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/DecorativePool -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/DecorativePool">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Reservoir"/>
+        <rdfs:comment>For improving the aesthetic appearance of the landscape</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Direction -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Direction">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/SpatialRelation"/>
+        <rdfs:comment>Text or code to describe direction of flow</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Disposal -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Disposal">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Reservoir"/>
+        <rdfs:comment>for disposal</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Divergence -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Divergence">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Event"/>
+        <rdfs:comment>A point on the surface water network where water is either removed or added to the network, typically through a conveyance such as a canal/ditch or pipeline</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Diversion -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Diversion">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/FeatureObject"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Elevated -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Elevated">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/RelationshipToSurface"/>
+        <rdfs:comment>Supported above the earth</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Elevation -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Elevation">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/SpatialRelation"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Ephemeral -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Ephemeral">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Temporality"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Intermittent"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Perennial"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Regulated"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Status"/>
+        <rdfs:comment>Contains water only during or after a local rainstorm or heavy snowmelt</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Estuary -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Estuary">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Waterbody"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/IceMass"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Impoundment"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/LakeOrPond"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Rapids"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/SeaOrOcean"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/SinkOrRise"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/SpringOrSeep"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/StreamOrRiver"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/SubmergedStream"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Watercourse"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Waterfall"/>
+        <rdfs:comment>An estuary is a semi-enclosed coastal body of water which has a free connection with the open sea and within which sea water is measurably diluted with fresh water derived from land drainage (Cameron and Pritchard, 1963). May be a named feature. An estuary is defined by the NOAA&apos;s Coastal Aquatic Framework (CAF) or local information concerning  the extent of the mixed zone of fresh and salt water. </rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Evaporator -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Evaporator">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Reservoir"/>
+        <rdfs:comment>For the natural evaporation of water to allow harvesting of mineral concentrates</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Event -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Event">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Flow"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Feature -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Feature">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/FeatureObject -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/FeatureObject">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Feature"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/FiltrationPond -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/FiltrationPond">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Treatment"/>
+        <rdfs:comment>undefined in NHD</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/FloodElevation -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/FloodElevation">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Stage"/>
+        <rdfs:comment>The stage that prevails when a natural water body is at or near capacity</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Flow -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Flow">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Flume -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Flume">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/FeatureObject"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Foreshore -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Foreshore">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/FeatureObject"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Function -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Function">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Gaging -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Gaging">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Event"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A structure used to measure the characteristics of a hydrographic feature.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Gate -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Gate">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/FeatureObject"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/GeneralCase -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/GeneralCase">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Pipeline"/>
+        <rdfs:comment>A closed feature used to to channel flowing water to another site</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/HighWaterElevation -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/HighWaterElevation">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Stage"/>
+        <rdfs:comment>The stage that prevails when a natural water body is at or near capacity</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/IceMass -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/IceMass">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Waterbody"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Impoundment"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/LakeOrPond"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Rapids"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/SeaOrOcean"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/SinkOrRise"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/SpringOrSeep"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/StreamOrRiver"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/SubmergedStream"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Watercourse"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Waterfall"/>
+        <rdfs:comment>A field of ice usually formed in regions of perennial frost. Ice Mass primarily consists of glaciers. May be a named feature. </rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Impoundment -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Impoundment">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Waterbody"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/LakeOrPond"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Rapids"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/SeaOrOcean"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/SinkOrRise"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/SpringOrSeep"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/StreamOrRiver"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/SubmergedStream"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Watercourse"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Waterfall"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Intermittent -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Intermittent">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Temporality"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Perennial"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Regulated"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Status"/>
+        <rdfs:comment>For long- or short-term storage of water</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/InundationArea -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/InundationArea">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/FeatureObject"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Kilometer -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Kilometer">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/SpatialMeasurementUnit"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/LakeOrPond -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/LakeOrPond">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Waterbody"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Rapids"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/SeaOrOcean"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/SinkOrRise"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/SpringOrSeep"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/StreamOrRiver"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/SubmergedStream"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Watercourse"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Waterfall"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Length -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Length">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/SpatialQuality"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Levee -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Levee">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/FeatureObject"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/LockChamber -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/LockChamber">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/FeatureObject"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Meter -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Meter">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/SpatialMeasurementUnit"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/NonEarthenMaterial -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/NonEarthenMaterial">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/FeatureObject"/>
+        <rdfs:comment>The predominant material used in construction is concrete, brick, or stone</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/NonearthenShore -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/NonearthenShore">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/FeatureObject"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/NormalPool -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/NormalPool">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Stage"/>
+        <rdfs:comment>The stage of an artificailly impounded wter body that prevails for the greater part of the year</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Operational -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Operational">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Status"/>
+        <rdfs:comment>Useable and inteded for use</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Penstock -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Penstock">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Pipeline"/>
+        <rdfs:comment>A structure designed to transport domestic or industrial water from a supply source to a distribution point, often by gravity</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Perennial -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Perennial">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Temporality"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Regulated"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Status"/>
+        <rdfs:comment>For long- or short-term storage of water</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Pipeline -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Pipeline">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/FeatureObject"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Playa -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Playa">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/FeatureObject"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Rapids -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Rapids">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Waterbody"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/SeaOrOcean"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/SinkOrRise"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/SpringOrSeep"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/StreamOrRiver"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/SubmergedStream"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Watercourse"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Waterfall"/>
+        <rdfs:comment>An area of swift current in a stream or river, characterized by standing waves or by boulders and rocks. May be a named feature. </rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Regulated -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Regulated">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Temporality"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Status"/>
+        <rdfs:comment>Structures, such as Dam/Weir or Levee, exist to control the water and innundate specific areas</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/RelationshipToSurface -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/RelationshipToSurface">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/SpatialRelation"/>
+        <rdfs:comment>Vertical location relative to the surface</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Reservoir -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Reservoir">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/FeatureObject"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Route -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Route">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/SpatialRelation"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/SeaOrOcean -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/SeaOrOcean">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Waterbody"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/SinkOrRise"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/SpringOrSeep"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/StreamOrRiver"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/SubmergedStream"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Watercourse"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Waterfall"/>
+        <rdfs:comment>The great body of salt water that covers much of the earth. May be a named feature. </rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/SettlingPond -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/SettlingPond">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Treatment"/>
+        <rdfs:comment>undefined in NHD</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/SewageTreatmentPond -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/SewageTreatmentPond">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Treatment"/>
+        <rdfs:comment>undefined in NHD</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/SinkOrRise -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/SinkOrRise">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Waterbody"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/SpringOrSeep"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/StreamOrRiver"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/SubmergedStream"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Watercourse"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Waterfall"/>
+        <rdfs:comment>The place at which a stream disappears underground or reappears at the surface in a karst area. May be a named feature. </rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Siphon -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Siphon">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Pipeline"/>
+        <rdfs:comment>Designed to convey water by gravitational force over, or under, an obstruction</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/SoundingDatumLine -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/SoundingDatumLine">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/SpatialRelation"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/SpatialExtent -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/SpatialExtent">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/SpatialMeasurementUnit"/>
+                    <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/SpatialQuality"/>
+                    <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/SpatialRelation"/>
+                </unionOf>
+            </Class>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spatial Region</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/SpatialMeasurementUnit -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/SpatialMeasurementUnit">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/SpatialExtent"/>
+        <rdfs:comment>Measurements are generalized representations of qualities of continuants, existing in the context of some whole</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/SpatialQuality -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/SpatialQuality">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/SpatialExtent"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/SpatialRelation -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/SpatialRelation">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/SpatialExtent"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Spillway -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Spillway">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/FeatureObject"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/SpillwayElevation -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/SpillwayElevation">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Stage"/>
+        <rdfs:comment>The stage of an artificially impounded water body as determined by the spillway</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/SpringOrSeep -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/SpringOrSeep">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Waterbody"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/StreamOrRiver"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/SubmergedStream"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Watercourse"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Waterfall"/>
+        <rdfs:comment>A place where water issues from the ground naturally. May be a named feature. </rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/SquareKilometer -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/SquareKilometer">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/SpatialMeasurementUnit"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/SquareMeter -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/SquareMeter">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/SpatialMeasurementUnit"/>
+        <rdfs:comment>conversion to acres (WBD AreaAcres) uses the factor of 0.0002471 (sq. meters times factor equals acres)</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Stage -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Stage">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/SpatialRelation"/>
+        <rdfs:isDefinedBy>http://water.usgs.gov/edu/qa-measure-streamstage.html</rdfs:isDefinedBy>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Status -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Status">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Temporality"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/StreamOrRiver -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/StreamOrRiver">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Waterbody"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/SubmergedStream"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Watercourse"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Waterfall"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/SubmergedStream -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/SubmergedStream">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Waterbody"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Watercourse"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Waterfall"/>
+        <rdfs:comment>The original river course inundated by an impounded water body. These are mostly used in drowned river systems like the Tennessee Valley Authority (TVA) lakes. May be a named feature. </rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/SurfaceWaterNetwork -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/SurfaceWaterNetwork">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/SwampOrMarsh -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/SwampOrMarsh">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/FeatureObject"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/SwimmingPool -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/SwimmingPool">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Reservoir"/>
+        <rdfs:comment>undefined in NHD</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/TailingsPond -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/TailingsPond">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Disposal"/>
+        <rdfs:comment>not defined in NHD</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Temporality -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Temporality">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Treatment -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Treatment">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Reservoir"/>
+        <rdfs:comment>For treatment</rdfs:comment>
+        <rdfs:comment>may be used alone without subtype</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Tunnel -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Tunnel">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/FeatureObject"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/UnderConstruction -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/UnderConstruction">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Status"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Underground -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Underground">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/RelationshipToSurface"/>
+        <rdfs:comment>Buried</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/UndergroundConduit -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/UndergroundConduit">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/AggregateFeature"/>
+        <rdfs:comment>A set of naturally occurring subsurface drainage channels formed from the dissolution of soluble rocks in karst terrain or in terrain similar to karst but formed in nonsoluble rocks, as by melting of permafrost or ground ice, collapse after mining, and by outflow of liquid lava from beneath its solidified crust. Not a named feature. </rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Underwater -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Underwater">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/RelationshipToSurface"/>
+        <rdfs:comment>Always submerged</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/VerticalRelationship -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/VerticalRelationship">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/SpatialRelation"/>
+        <rdfs:comment>The spatial relation between features that cross but do not exchange flow</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Wall -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Wall">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/FeatureObject"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Wash -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Wash">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/FeatureObject"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/WaterStorage -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/WaterStorage">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Reservoir"/>
+        <rdfs:comment>For long- or short-term storage of water</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Waterbody -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Waterbody">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Flow"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Watercourse -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Watercourse">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Waterbody"/>
+        <disjointWith rdf:resource="http://cegis.usgs.gov/SWO/Waterfall"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Waterfall -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Waterfall">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Waterbody"/>
+        <rdfs:comment>A vertical or near-vertical descent of water over a step or ledge in the bed of a river. May be a named feature. </rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Weir -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Weir">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/FeatureObject"/>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Well -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Well">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/FeatureObject"/>
+        <rdfs:comment>A pit or hole dug or bored into the earth for the extraction of oil, water, other fluids, or gases. May be a named feature. </rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Withdrawing -->
+
+    <Class rdf:about="http://cegis.usgs.gov/SWO/Withdrawing">
+        <rdfs:subClassOf rdf:resource="http://cegis.usgs.gov/SWO/Divergence"/>
+        <rdfs:comment>A point on the surface water network where water is removed from the network, typically through a conveyance such as a CanalDitch or pipeline</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#Point -->
+
+    <Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#Point">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+        <rdfs:comment>A point, typically described using a coordinate system relative to Earth, such as WGS84. Uniquely identified by lat/long/alt. i.e. spaciallyIntersects(P1, P2) :- lat(P1, LAT), long(P1, LONG), alt(P1, ALT), lat(P2, LAT), long(P2, LONG), alt(P2, ALT).  sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P2).</rdfs:comment>
+        <rdfs:label>point</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing -->
+
+    <Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">
+        <rdfs:comment>Anything with spatial extent, i.e. size, shape, or position.
+ e.g. people, places, bowling balls, as well as abstract areas like cubes.
+</rdfs:comment>
+        <rdfs:label>SpatialThing</rdfs:label>
+    </Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Aqueduct -->
+
+    <NamedIndividual rdf:about="http://cegis.usgs.gov/SWO/Aqueduct">
+        <SWO:flow rdf:resource="http://cegis.usgs.gov/SWO/Watercourse"/>
+        <SWO:spatialExtent rdf:resource="http://cegis.usgs.gov/SWO/Length"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Area -->
+
+    <NamedIndividual rdf:about="http://cegis.usgs.gov/SWO/Area"/>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/AreaToBeSubmerged -->
+
+    <NamedIndividual rdf:about="http://cegis.usgs.gov/SWO/AreaToBeSubmerged">
+        <SWO:flow rdf:resource="http://cegis.usgs.gov/SWO/Impoundment"/>
+        <SWO:spatialExtent rdf:resource="http://cegis.usgs.gov/SWO/Area"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Bridge -->
+
+    <NamedIndividual rdf:about="http://cegis.usgs.gov/SWO/Bridge">
+        <SWO:flow rdf:resource="http://cegis.usgs.gov/SWO/Watercourse"/>
+        <SWO:spatialExtent rdf:resource="http://cegis.usgs.gov/SWO/Length"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/CanalOrDitch -->
+
+    <NamedIndividual rdf:about="http://cegis.usgs.gov/SWO/CanalOrDitch">
+        <SWO:flow rdf:resource="http://cegis.usgs.gov/SWO/Watercourse"/>
+        <SWO:spatialExtent rdf:resource="http://cegis.usgs.gov/SWO/Length"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Coastline -->
+
+    <NamedIndividual rdf:about="http://cegis.usgs.gov/SWO/Coastline"/>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Connector -->
+
+    <NamedIndividual rdf:about="http://cegis.usgs.gov/SWO/Connector">
+        <SWO:flow rdf:resource="http://cegis.usgs.gov/SWO/Watercourse"/>
+        <SWO:spatialExtent rdf:resource="http://cegis.usgs.gov/SWO/Length"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Dam -->
+
+    <NamedIndividual rdf:about="http://cegis.usgs.gov/SWO/Dam">
+        <SWO:flow rdf:resource="http://cegis.usgs.gov/SWO/LakeOrPond"/>
+        <SWO:spatialExtent rdf:resource="http://cegis.usgs.gov/SWO/Area"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Diversion -->
+
+    <NamedIndividual rdf:about="http://cegis.usgs.gov/SWO/Diversion">
+        <SWO:flow rdf:resource="http://cegis.usgs.gov/SWO/Watercourse"/>
+        <SWO:spatialExtent rdf:resource="http://cegis.usgs.gov/SWO/Length"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Elevation -->
+
+    <NamedIndividual rdf:about="http://cegis.usgs.gov/SWO/Elevation"/>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Flume -->
+
+    <NamedIndividual rdf:about="http://cegis.usgs.gov/SWO/Flume">
+        <SWO:flow rdf:resource="http://cegis.usgs.gov/SWO/Watercourse"/>
+        <SWO:spatialExtent rdf:resource="http://cegis.usgs.gov/SWO/Length"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Foreshore -->
+
+    <NamedIndividual rdf:about="http://cegis.usgs.gov/SWO/Foreshore">
+        <SWO:flow rdf:resource="http://cegis.usgs.gov/SWO/Coastline"/>
+        <SWO:spatialExtent rdf:resource="http://cegis.usgs.gov/SWO/SoundingDatumLine"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Gate -->
+
+    <NamedIndividual rdf:about="http://cegis.usgs.gov/SWO/Gate">
+        <SWO:flow rdf:resource="http://cegis.usgs.gov/SWO/Watercourse"/>
+        <SWO:spatialExtent rdf:resource="http://cegis.usgs.gov/SWO/Elevation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/IA-1 -->
+
+    <NamedIndividual rdf:about="http://cegis.usgs.gov/SWO/IA-1">
+        <rdf:type rdf:resource="http://cegis.usgs.gov/SWO/InundationArea"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/IA-2 -->
+
+    <NamedIndividual rdf:about="http://cegis.usgs.gov/SWO/IA-2">
+        <rdf:type rdf:resource="http://cegis.usgs.gov/SWO/InundationArea"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/IA-3 -->
+
+    <NamedIndividual rdf:about="http://cegis.usgs.gov/SWO/IA-3">
+        <rdf:type rdf:resource="http://cegis.usgs.gov/SWO/InundationArea"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Impoundment -->
+
+    <NamedIndividual rdf:about="http://cegis.usgs.gov/SWO/Impoundment"/>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/InundationArea -->
+
+    <NamedIndividual rdf:about="http://cegis.usgs.gov/SWO/InundationArea">
+        <SWO:flow rdf:resource="http://cegis.usgs.gov/SWO/Waterbody"/>
+        <SWO:spatialExtent rdf:resource="http://cegis.usgs.gov/SWO/SpatialQuality"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/LakeOrPond -->
+
+    <NamedIndividual rdf:about="http://cegis.usgs.gov/SWO/LakeOrPond"/>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Length -->
+
+    <NamedIndividual rdf:about="http://cegis.usgs.gov/SWO/Length"/>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Levee -->
+
+    <NamedIndividual rdf:about="http://cegis.usgs.gov/SWO/Levee">
+        <SWO:flow rdf:resource="http://cegis.usgs.gov/SWO/Coastline"/>
+        <SWO:flow rdf:resource="http://cegis.usgs.gov/SWO/StreamOrRiver"/>
+        <SWO:spatialExtent rdf:resource="http://cegis.usgs.gov/SWO/Elevation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/LockChamber -->
+
+    <NamedIndividual rdf:about="http://cegis.usgs.gov/SWO/LockChamber">
+        <SWO:flow rdf:resource="http://cegis.usgs.gov/SWO/Watercourse"/>
+        <SWO:spatialExtent rdf:resource="http://cegis.usgs.gov/SWO/Area"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/NonearthenShore -->
+
+    <NamedIndividual rdf:about="http://cegis.usgs.gov/SWO/NonearthenShore">
+        <SWO:flow rdf:resource="http://cegis.usgs.gov/SWO/Waterbody"/>
+        <SWO:spatialExtent rdf:resource="http://cegis.usgs.gov/SWO/SpatialQuality"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Pipeline -->
+
+    <NamedIndividual rdf:about="http://cegis.usgs.gov/SWO/Pipeline">
+        <SWO:flow rdf:resource="http://cegis.usgs.gov/SWO/Watercourse"/>
+        <SWO:spatialExtent rdf:resource="http://cegis.usgs.gov/SWO/SpatialQuality"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Playa -->
+
+    <NamedIndividual rdf:about="http://cegis.usgs.gov/SWO/Playa">
+        <SWO:flow rdf:resource="http://cegis.usgs.gov/SWO/Impoundment"/>
+        <SWO:spatialExtent rdf:resource="http://cegis.usgs.gov/SWO/SpatialQuality"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Reservoir -->
+
+    <NamedIndividual rdf:about="http://cegis.usgs.gov/SWO/Reservoir">
+        <SWO:flow rdf:resource="http://cegis.usgs.gov/SWO/Impoundment"/>
+        <SWO:spatialExtent rdf:resource="http://cegis.usgs.gov/SWO/SpatialQuality"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/SoundingDatumLine -->
+
+    <NamedIndividual rdf:about="http://cegis.usgs.gov/SWO/SoundingDatumLine"/>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/SpatialQuality -->
+
+    <NamedIndividual rdf:about="http://cegis.usgs.gov/SWO/SpatialQuality"/>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Spillway -->
+
+    <NamedIndividual rdf:about="http://cegis.usgs.gov/SWO/Spillway">
+        <SWO:flow rdf:resource="http://cegis.usgs.gov/SWO/Watercourse"/>
+        <SWO:spatialExtent rdf:resource="http://cegis.usgs.gov/SWO/SpatialQuality"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/StreamOrRiver -->
+
+    <NamedIndividual rdf:about="http://cegis.usgs.gov/SWO/StreamOrRiver"/>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/SwampOrMarsh -->
+
+    <NamedIndividual rdf:about="http://cegis.usgs.gov/SWO/SwampOrMarsh">
+        <SWO:flow rdf:resource="http://cegis.usgs.gov/SWO/Waterbody"/>
+        <SWO:spatialExtent rdf:resource="http://cegis.usgs.gov/SWO/SpatialQuality"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Tunnel -->
+
+    <NamedIndividual rdf:about="http://cegis.usgs.gov/SWO/Tunnel">
+        <SWO:flow rdf:resource="http://cegis.usgs.gov/SWO/Watercourse"/>
+        <SWO:spatialExtent rdf:resource="http://cegis.usgs.gov/SWO/SpatialQuality"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Wall -->
+
+    <NamedIndividual rdf:about="http://cegis.usgs.gov/SWO/Wall">
+        <SWO:flow rdf:resource="http://cegis.usgs.gov/SWO/Waterbody"/>
+        <SWO:spatialExtent rdf:resource="http://cegis.usgs.gov/SWO/SpatialQuality"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Wash -->
+
+    <NamedIndividual rdf:about="http://cegis.usgs.gov/SWO/Wash">
+        <SWO:flow rdf:resource="http://cegis.usgs.gov/SWO/StreamOrRiver"/>
+        <SWO:spatialExtent rdf:resource="http://cegis.usgs.gov/SWO/SpatialQuality"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Waterbody -->
+
+    <NamedIndividual rdf:about="http://cegis.usgs.gov/SWO/Waterbody"/>
+    
+
+
+    <!-- http://cegis.usgs.gov/SWO/Watercourse -->
+
+    <NamedIndividual rdf:about="http://cegis.usgs.gov/SWO/Watercourse"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/Aqueduct">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A structure designed to transport domestic or industrial water from a supply source to a distribution point, often by gravity</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/AreaToBeSubmerged">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The known extent of the intended lake that will be created behind a dam under construction.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/Bridge">
+        <rdfs:comment>A structure spanning and providing passage of a waterway over another waterway, railroad, or other obstacle. May be a named feature. </rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/CanalOrDitch">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An artificial open waterway constructed to transport water, to irrigate or drain land, to connect two or more bodies of water, or to serve as a waterway for watercraft.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/Coastline">
+        <rdfs:comment>A line of contact between the open sea and the land, including imaginary lines separating inland water bodies from the open sea. The NHD acquires coastline data from the National Ocean and Atmospheric Agency (NOAA) and it is not a product of the USGS. Coastline in the NHD is a representation of the Mean High Water (MHW) as calculated by NOAA and may not match orthoimagery. Coastline in the NHD could be altered but must have an accomplanying metadata record that identifies the scientific method used to calibrate the coastline to a known vertical datum. Coastline may be a named feature. </rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/Connector">
+        <rdfs:comment>A known, but nonspecific, invisible connection between two nonadjacent network segments. An example would be connectors passing through a dam that connect the network from one side of the dam to the other. The pipelines that pass through dams are not usually visible and may pass through complex hydroelectric machinery. </rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/Dam">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A barrier constructed to control the flow or raise the level of water. When DamWeir is a nonearthen structure, it will be coincident with a Nonearthen Shore Feature.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/Diversion">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A stream channel within the hydrologic unit that was altered to divert surface water from one location to another (alters natural boundary location)</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/Elevation">
+        <rdfs:comment>The vertical distance from a given datum. related to stage of the water elevation</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/Flume">
+        <rdfs:comment>An open, inclined, artificial channel constructed of wood, metal, or concrete; generally elevated. May be a named feature. </rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/Foreshore">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The area of shore that lies between the limits of the mean highwater (MHW) and mean low low water (MLLW) tidal marks and is exposed during low tides. </rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/Gate">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A structure that may be swung, drawn, or lowered to block an entrance or passageway.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/Impoundment">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A body of water formed by impounding </rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/InundationArea">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An area of land subject to flooding.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/Levee">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An embankment built to prevent flooding or to control or confine the flow of liquids.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/LockChamber">
+        <rdfs:comment>An enclosure on a waterway used to raise and lower vessels as they pass from one level to another. May be a named feature. </rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/NonearthenShore">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A structure built of stone, brick, concrete, or other building materials that borders a body of water.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/Pipeline">
+        <rdfs:comment>A closed conduit, with pumps, valves, and control devices for conveying fluids, gases, or finely divided solids. Not a named feature. </rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/Playa">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The flat area at the lowest part of an undrained desert basin, generally devoid of vegetation.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/Reservoir">
+        <rdfs:comment>A constructed basin formed to contain water or other liquids. May be a named feature. </rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/SoundingDatumLine">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A line representing the bathymetric contour of mean low low water (MLLW) for which a foreshore feature is present or visible.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/SpatialQuality">
+        <rdfs:comment>A dependent, enduring part of an independent entity that does not require any further processing in order to be realized</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/Spillway">
+        <rdfs:comment>A constructed passage for surplus water to run over or around a dam</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/StreamOrRiver">
+        <rdfs:comment>A body of flowing water. May be a named feature</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/SwampOrMarsh">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A noncultivated, vegetated area that is inundated or saturated for a significant part of the year. The vegetation is adapted for life in saturated soil conditions.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/Tunnel">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An underground or underwater passage that carries water-bearing features such as CanalDitch or Pipeline.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/Wall">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An upright structure of masonry, wood, plaster, or other building material serving to separate land from water with no additional structures present. If other associated structures, such as DamWeir, are present, use Nonearthern Shore.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/Wash">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The usually dry portion of a stream bed that contains water only during or after a local rainstorm or heavy snowmelt</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/Waterbody">
+        <rdfs:comment>Flow table values are derived from the topologic connectivity of the geometric network and values of FlowDir attribute of NHDFlowline Features. </rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat_long">
+        <rdfs:comment>A comma-separated representation of a latitude, longitude coordinate.</rdfs:comment>
+        <rdfs:label>lat/long</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/AboveWater"/>
+            <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/AtOrNear"/>
+            <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/Elevated"/>
+            <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/Underground"/>
+            <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/Underwater"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/Approximate"/>
+            <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/AverageWaterElevation"/>
+            <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/FloodElevation"/>
+            <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/HighWaterElevation"/>
+            <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/NormalPool"/>
+            <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/SpillwayElevation"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/Area"/>
+            <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/InundationArea"/>
+            <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/Length"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/Direction"/>
+            <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/Elevation"/>
+            <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/SoundingDatumLine"/>
+            <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/VerticalRelationship"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/Ephemeral"/>
+            <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/Intermittent"/>
+            <rdf:Description rdf:about="http://cegis.usgs.gov/SWO/Perennial"/>
+        </members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,642 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://spatial.maine.edu/semgaz/HydroOntology"
+     xml:base="http://spatial.maine.edu/semgaz/HydroOntology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://spatial.maine.edu/semgaz/HydroOntology">
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Created with TopBraid Composer</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#flowsfrom -->
+
+    <owl:ObjectProperty rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#flowsfrom">
+        <rdfs:subPropertyOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#hasHydrographicRelation"/>
+        <owl:inverseOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#hasOutflow"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Falls"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Rapids"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#River"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Lake"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#River"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Spring"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Wetlands"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flowsfrom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#flowsinto -->
+
+    <owl:ObjectProperty rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#flowsinto">
+        <rdfs:subPropertyOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#hasHydrographicRelation"/>
+        <owl:inverseOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#hasInflow"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#River"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Lake"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Ocean"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#River"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#SaltWaterBay"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Wetlands"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flowsinto</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#flowsthrough -->
+
+    <owl:ObjectProperty rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#flowsthrough">
+        <rdfs:subPropertyOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#hasHydrographicRelation"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#River"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Lake"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Reservoir"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Spring"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Wetlands"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flowsthrough</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#hasDam -->
+
+    <owl:ObjectProperty rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#hasDam">
+        <rdfs:subPropertyOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#hasHydrographicStructure"/>
+        <owl:inverseOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#isDamOf"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Lake"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#River"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#DamWeir"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has dam</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#hasFreshWaterBay -->
+
+    <owl:ObjectProperty rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#hasFreshWaterBay">
+        <rdfs:subPropertyOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#hasHydrologicPart"/>
+        <owl:inverseOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#isFreshWaterBayOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#FreshwaterBay"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Lake"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#FreshwaterBay"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has fresh water bay</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#hasGagingStation -->
+
+    <owl:ObjectProperty rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#hasGagingStation">
+        <rdfs:subPropertyOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#hasHydrographicStructure"/>
+        <owl:inverseOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#isGagingStationOf"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#River"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#GagingStation"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has gaging station</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#hasHydrographicRelation -->
+
+    <owl:ObjectProperty rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#hasHydrographicRelation">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has hydrographic relation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#hasHydrographicStructure -->
+
+    <owl:ObjectProperty rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#hasHydrographicStructure">
+        <owl:inverseOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#isDamOf"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has hydrographic structure</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#hasHydrologicPart -->
+
+    <owl:ObjectProperty rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#hasHydrologicPart">
+        <rdfs:subPropertyOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#hasPart"/>
+        <owl:inverseOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#isHydrologicPartOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has hydrographic part</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#hasInflow -->
+
+    <owl:ObjectProperty rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#hasInflow">
+        <rdfs:subPropertyOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#hasHydrographicRelation"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Lake"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Wetlands"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#River"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has inflow</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#hasMainStem -->
+
+    <owl:ObjectProperty rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#hasMainStem">
+        <rdfs:subPropertyOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#hasHydrologicPart"/>
+        <owl:inverseOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#isMainStemOf"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#River"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#River"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has main stem</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#hasMouth -->
+
+    <owl:ObjectProperty rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#hasMouth">
+        <rdfs:subPropertyOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#isHydrologicallyConnectedTo"/>
+        <owl:inverseOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#isMouthOf"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Lake"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#River"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Lake"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Ocean"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#River"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has mouth</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#hasOutflow -->
+
+    <owl:ObjectProperty rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#hasOutflow">
+        <rdfs:subPropertyOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#hasHydrographicRelation"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Lake"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Wetlands"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#River"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has outflow</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#hasPart">
+        <owl:inverseOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#isPartOf"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#River"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Falls"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Rapids"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#hasRapids -->
+
+    <owl:ObjectProperty rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#hasRapids">
+        <rdfs:subPropertyOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#hasHydrologicPart"/>
+        <owl:inverseOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#isRapidsOf"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#River"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Rapids"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#hasSaltWaterBay -->
+
+    <owl:ObjectProperty rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#hasSaltWaterBay">
+        <rdfs:subPropertyOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#hasHydrologicPart"/>
+        <owl:inverseOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#isSaltWaterBayOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Coastline"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Ocean"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#SaltWaterBay"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#SaltWaterBay"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has bay</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#hasSource -->
+
+    <owl:ObjectProperty rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#hasSource">
+        <rdfs:subPropertyOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#isHydrologicallyConnectedTo"/>
+        <owl:inverseOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#isSourceOf"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Lake"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#River"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Lake"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#River"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Spring"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has source</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#hasSubWatershed -->
+
+    <owl:ObjectProperty rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#hasSubWatershed">
+        <rdfs:subPropertyOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#hasHydrologicPart"/>
+        <owl:inverseOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#isSubWatershedOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Watershed"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Watershed"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has sub watershed</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#hasTributary -->
+
+    <owl:ObjectProperty rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#hasTributary">
+        <rdfs:subPropertyOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#isHydrologicallyConnectedTo"/>
+        <owl:inverseOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#isTributaryOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#River"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#River"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has tributary</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#isDamOf -->
+
+    <owl:ObjectProperty rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#isDamOf">
+        <rdfs:subPropertyOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#hasHydrographicStructure"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#DamWeir"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Lake"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#River"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is dam of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#isDownstreamTo -->
+
+    <owl:ObjectProperty rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#isDownstreamTo">
+        <rdfs:subPropertyOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#hasHydrographicRelation"/>
+        <owl:inverseOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#isUpstreamOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#River"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Watershed"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#River"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Watershed"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is downstream to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#isFreshWaterBayOf -->
+
+    <owl:ObjectProperty rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#isFreshWaterBayOf">
+        <rdfs:subPropertyOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#isHydrologicPartOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#FreshwaterBay"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#FreshwaterBay"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Lake"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is fresh water bay of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#isGagingStationOf -->
+
+    <owl:ObjectProperty rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#isGagingStationOf">
+        <rdfs:subPropertyOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#hasHydrographicStructure"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#GagingStation"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#River"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is gaging station of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#isHydrologicPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#isHydrologicPartOf">
+        <rdfs:subPropertyOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#isPartOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#isHydrologicallyConnectedTo -->
+
+    <owl:ObjectProperty rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#isHydrologicallyConnectedTo"/>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#isMainStemOf -->
+
+    <owl:ObjectProperty rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#isMainStemOf">
+        <rdfs:subPropertyOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#isHydrologicPartOf"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#River"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#River"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is main stem of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#isMouthOf -->
+
+    <owl:ObjectProperty rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#isMouthOf">
+        <rdfs:subPropertyOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#isHydrologicallyConnectedTo"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Lake"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Ocean"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#River"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#SaltWaterBay"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Lake"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#River"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is mouth of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#isPartOf">
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Falls"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Rapids"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#River"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is part of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#isRapidsOf -->
+
+    <owl:ObjectProperty rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#isRapidsOf">
+        <rdfs:subPropertyOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#isHydrologicPartOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#isSaltWaterBayOf -->
+
+    <owl:ObjectProperty rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#isSaltWaterBayOf">
+        <rdfs:subPropertyOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#isHydrologicPartOf"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#SaltWaterBay"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#SaltWaterBay"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is salt water bay of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#isSourceOf -->
+
+    <owl:ObjectProperty rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#isSourceOf">
+        <rdfs:subPropertyOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#isHydrologicallyConnectedTo"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Lake"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#River"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Spring"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Lake"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#River"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is source of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#isSubWatershedOf -->
+
+    <owl:ObjectProperty rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#isSubWatershedOf">
+        <rdfs:subPropertyOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#isHydrologicPartOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Watershed"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Watershed"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is sub watershed of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#isTributaryOf -->
+
+    <owl:ObjectProperty rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#isTributaryOf">
+        <rdfs:subPropertyOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#isHydrologicallyConnectedTo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#River"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#River"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is tributary of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#isUpstreamOf -->
+
+    <owl:ObjectProperty rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#isUpstreamOf">
+        <rdfs:subPropertyOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#hasHydrographicRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#River"/>
+        <rdfs:domain rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Watershed"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#River"/>
+        <rdfs:range rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Watershed"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is upstream of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#Boundary -->
+
+    <owl:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#Boundary">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boundary</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#Coastline -->
+
+    <owl:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#Coastline">
+        <rdfs:subClassOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Boundary"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coastline</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#DamWeir -->
+
+    <owl:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#DamWeir">
+        <rdfs:subClassOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Hydrographic_Structure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dam weir</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#Falls -->
+
+    <owl:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#Falls">
+        <rdfs:subClassOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#FreshWater_Feature"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Falls</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#FreshWater_Feature -->
+
+    <owl:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#FreshWater_Feature">
+        <rdfs:subClassOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Hydrographic_Feature"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fresh water Feature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#FreshwaterBay -->
+
+    <owl:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#FreshwaterBay">
+        <rdfs:subClassOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#FreshWater_Feature"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Freshwater Bay</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#GagingStation -->
+
+    <owl:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#GagingStation">
+        <rdfs:subClassOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Hydrographic_Structure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gaging stations</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#Hydrographic_Feature -->
+
+    <owl:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#Hydrographic_Feature">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hydrographic Feature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#Hydrographic_Structure -->
+
+    <owl:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#Hydrographic_Structure">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hydrographic structure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#Lake -->
+
+    <owl:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#Lake">
+        <rdfs:subClassOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#FreshWater_Feature"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lake</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#Levee -->
+
+    <owl:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#Levee">
+        <rdfs:subClassOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Hydrographic_Structure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Levee</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#Ocean -->
+
+    <owl:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#Ocean">
+        <rdfs:subClassOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#SaltWater_Feature"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ocean</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#Rapids -->
+
+    <owl:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#Rapids">
+        <rdfs:subClassOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#FreshWater_Feature"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rapids</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#Reservoir -->
+
+    <owl:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#Reservoir">
+        <rdfs:subClassOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#FreshWater_Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#River -->
+
+    <owl:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#River">
+        <rdfs:subClassOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#FreshWater_Feature"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">River</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#SaltWaterBay -->
+
+    <owl:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#SaltWaterBay">
+        <rdfs:subClassOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#SaltWater_Feature"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bay</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#SaltWater_Feature -->
+
+    <owl:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#SaltWater_Feature">
+        <rdfs:subClassOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Hydrographic_Feature"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Salt water Feature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#Spring -->
+
+    <owl:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#Spring">
+        <rdfs:subClassOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#FreshWater_Feature"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spring</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#Watershed -->
+
+    <owl:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#Watershed">
+        <rdfs:subClassOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#Boundary"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Watershed</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://spatial.maine.edu/semgaz/HydroOntology#Wetlands -->
+
+    <owl:Class rdf:about="http://spatial.maine.edu/semgaz/HydroOntology#Wetlands">
+        <rdfs:subClassOf rdf:resource="http://spatial.maine.edu/semgaz/HydroOntology#FreshWater_Feature"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wetlands</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#ObjectProperty -->
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+
